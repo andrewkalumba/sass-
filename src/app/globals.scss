@@ -1,0 +1,83 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  @include flexrow(center);
+  gap: $indent__s;
+
+  @include responsive-tablet {
+    @include flexrow(space-between);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &__icon,
+  &__avatar {
+    display: none;
+
+    @include responsive-tablet {
+      display: block;
+      width: 100px;
+    }
+  }
+
+  &__logo {
+    width: 100px;
+    flex-grow: .2;
+  }
+}
+
+.container {
+  background-color: $color-gray;
+  @include flexrow(center);
+  min-height: 100vh;
+}
+
+.mainContent {
+  @include mainContentData;
+  flex-grow: 1;
+}
+
+.menu {
+  @include flexrow (space-between);
+  @include page-layout(0, auto, 100%);
+  // @include page-layout($indent__xl,auto);
+  background-color: $bg-color;
+
+  &__item {
+
+    &--home {
+      @include menuItem($color-white);
+    }
+
+    &--pokemon {
+      @include menuItem($color-torch-red);
+    }
+
+    &--types {
+      @include menuItem($color-malibu);
+    }
+
+    &--about {
+      @include menuItem($color-minsk);
+    }
+  }
+}
+
+.footer {
+  background-color: $color-black;
+  color: $color-white;
+  padding:$indent__base;
+  @include flexrow(center);
+}

@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+//sizes
+$indent__base:16px;
+$indent__s: $indent__base / 2;
+$indent__m: $indent__base * 1.5;
+$indent__1: $indent__base * 2;
+$indent__xl: $indent__base / 3;
+$indent__xx1: $indent__base / 4;
+$indent__xxxl: $indent__base / 5;
+
+//colors
+$color-white: #EEF0F2;
+$color-black: #000807;
+$color-bright-sun: #fbd743;
+$color-torch-red: #ff1f1f;
+$color-malibu: #5db9ff;
+$color-minsk: #363b81;
+$color-gray: #66717E;
+$bg-color: #000807;
+$color__1: #EEF0F2;
+$color__2: #13293D;
+$color__3: #66717E;
+$color__4: #83C9F4;
+
+//utility colors
+$color-primary:$color-white;
+$bg-color:$color-black;
+
+//font
+$font-orbitron: "Orbitron", "sans serif";
+
+//breakpoints
+$breakpoint-tablet: 768px;
+

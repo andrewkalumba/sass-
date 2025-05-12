@@ -1,0 +1,51 @@
+  @mixin flexrow ($itemContent) {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      justify-content: $itemContent;
+  }
+
+  @mixin page-layout ($Yaxis, $Xaxis, $max-width) {
+      max-width: $max-width;
+      margin: $Yaxis $Xaxis;
+  }
+
+  @mixin menuItem ($accentColor: $color-gray) { //default color if one item doesnt have acolor
+      border-bottom: $indent__s solid $accentColor;
+      color: $color-gray;
+      padding: $indent__s;
+
+      font: {
+          family: $font-orbitron;
+          size: 1.2rem;
+          weight: bold;
+      }
+
+      text: {
+          align: center;
+          transform: capitalize;
+          decoration: none;
+      }
+
+      @include responsive-tablet {
+          padding: $indent__1;
+      }
+
+      &:hover,
+      &.active {
+          background-color: $accentColor ;
+      }
+  }
+
+  @mixin responsive-tablet {
+      @media screen and (min-width:$breakpoint-tablet) {
+          @content;
+
+      }
+  }
+
+  @mixin mainContentData {
+      text-align: center;
+      font-size: 2rem;
+      padding: $indent__xxxl;
+  }

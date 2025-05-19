@@ -5,7 +5,7 @@ export type ContentArticleProps = {
 }
 
 export interface PokemonType {
-    id:number
+    id?:number
     name:string
     image:string
     types:string[]

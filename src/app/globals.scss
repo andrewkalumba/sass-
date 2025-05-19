@@ -91,7 +91,7 @@ body {
   justify-content: center;
 
   &__article {
-    @include home-grid-article;
+    // @include home-grid-article;
     margin-bottom: $indent__xxxl;
     border: 1px solid $color-gray;
 

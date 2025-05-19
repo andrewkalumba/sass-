@@ -69,7 +69,7 @@
       text-align: center;
   }
 
-  @mixin home-grid-article($color: red) {
+  @mixin home-grid-article($color) {
       @include flexCol;
 
       @if ($color ==$color__4) {

@@ -4,7 +4,6 @@ import './pokemon.scss'
 import { PokemonType } from '@/utils/types.js'
 import DisplayPokemon from "@/components/DisplayPokemon"
 import './pokemon.scss'
-import MainContent from "@/components/MainContent"
 
 const Pokemon = () => {
     const [caughtPokemon, setCaughtPokemon] = useState<PokemonType | null>()

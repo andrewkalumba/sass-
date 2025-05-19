@@ -1,4 +1,4 @@
-//  import './types.scss';
+// ( import './types.scss';
 
 //  let allTypes: string[];
 
@@ -27,7 +27,7 @@
 //      )
 //  }
 
-// export default Types
+// export default Types)
 
 "use client"
 import './types.scss';
@@ -38,7 +38,6 @@ const API_ENDPOINT = "https://pokeapi.co/api/v2/type";
 
 type resultsProp = {
 results:typesItemProp[]
-
 }
 
 const Types = () => {
@@ -63,7 +62,7 @@ const Types = () => {
 
     return (
         <div className="pokemon__types">
-            {typesData && typesData.filter((_item, index)=> index < 18).map((item:typesItemProp, index: number)=> <a key={index} href="#" className={`pokemon__content--${item.name}`}>{item.name}</a>)}
+            {typesData && typesData.filter((_item, index)=> index < 18).map((item:typesItemProp, index: number)=> <a key={index} href={`/types/${item.name}`} className={`pokemon__content--${item.name}`}>{item.name}</a>)}
         </div>
     )
 

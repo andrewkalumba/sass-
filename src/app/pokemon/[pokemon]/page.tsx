@@ -3,14 +3,14 @@ import '../pokemon.scss'
 import { PokemonType } from '@/utils/types'
 import DisplayPokemon from '@/components/DisplayPokemon'
 
-interface pokemonSinglesProp {
+interface SinglePokemonProp {
   params: {
     pokemon: string
   }
 }
   let pokemonData: PokemonType ;
 
-const PokemonSingles = async ({ params }: pokemonSinglesProp) => {
+const PokemonSingles = async ({ params }: SinglePokemonProp) => {
   const { pokemon } = params;
 
   try {
@@ -24,6 +24,7 @@ const PokemonSingles = async ({ params }: pokemonSinglesProp) => {
       types: data.types.map((item: { type: { name: string } }) => item.type.name)
     };
     console.log(data)
+    
   } catch (error) {
     console.error(`Failed to fetch Pokémon: ${error}`);
   }

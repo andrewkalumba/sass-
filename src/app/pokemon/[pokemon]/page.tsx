@@ -3,7 +3,7 @@ import '../pokemon.scss'
 import { PokemonType } from '@/utils/types'
 import DisplayPokemon from '@/components/DisplayPokemon'
 
-interface SinglePokemonProp {
+type SinglePokemonProp = {
   params: {
     pokemon: string
   }

@@ -1,5 +1,5 @@
 import '../types.scss'
-interface TypePageProp {
+type TypePageProp = {
     pokemon:{
     name: string
     url: string
